@@ -34,7 +34,7 @@ class Main extends React.Component {
   getContent() {
     console.log("getContent Fired!");
     if (this.state.displayState == "ShowBody") {
-      return <Body />;
+      return <Body showAll={this.showAll.bind(this)}/>;
     } else {
       console.log("getContent Else Fired!");
       return <AllItems />;
@@ -45,10 +45,10 @@ class Main extends React.Component {
     return (
       <div>
         <button className="button primary medium center-object" onClick={this.showAll.bind(this)}>
-          Show All
+          Main Show All
         </button>
         <button className="button primary medium center-object" onClick={this.showBody.bind(this)}>
-          Show Body
+          Main Show Body
         </button>
         { this.getContent() }
       </div>

@@ -1,14 +1,13 @@
 import React from "react";
 
 class Body extends React.Component {
-  constructor(props){
-    super(props);
-  }
 
     render() {
         return (
-
         <div>
+        <button onClick = {this.props.showAll}>
+          Body Show All
+        </button>
           <section id="home_introduction" styles="background-image: url(/wp-content/themes/name-a-star/images/milky-way-2k_mini.jpg);">
             <div className="wrapper">
               <h1 className="white center-text">Name A Star For Someone Special</h1>
